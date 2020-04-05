@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="Tree.js"></script>
+</head>
+<body>
+<div class="parentNode"></div>
+
+</body>
+<script>
+
+
+
+    const obj = [
+        {
+            content: 'Item1',
+            children: [
+                {
+                    content: 'Item11',
+                    children: []
+                },
+                {
+                    content: 'Item12',
+                    children: [
+                        {
+                            content: 'Item121',
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            content: 'Item2',
+            children: [
+                {
+                    content: 'Item21',
+                    children: []
+                }, {
+                    content: 'Item22',
+                    children: [
+                        {
+                            content: 'Item221',
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    content: 'Item23',
+                    children: []
+                }
+            ]
+        },
+        {
+            content: 'Item3',
+            children: [
+                {
+                    content: 'Item31',
+                    children: [
+                        {
+                            content: 'Item311',
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    content: 'Item32',
+                    children: []
+                }
+            ]
+        }
+    ];
+
+
+    const tree = new Tree(document.getElementsByClassName('parentNode')[0]);
+    tree.setData(obj);
+
+
+</script>
+</html>

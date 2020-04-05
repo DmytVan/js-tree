@@ -1,0 +1,99 @@
+.Container {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.Container li {
+    list-style-type: none;
+}
+
+.Node {
+    margin-left: 25px;
+    background: top left repeat-y url('../icons/i.gif');
+
+}
+
+.IsLast {
+    background: no-repeat url('../icons/i_half_25px.gif'); /*change*/
+}
+
+.IsRoot {
+    margin-left: 0;
+}
+
+.Expand {
+    margin-top: 5px; /*add*/
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.Content {
+    margin-left: 2px;
+    margin-top: 3px; /*add*/
+    min-height: 21px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Content:hover {
+    font-weight: bold;
+}
+
+.ExpandOpen .Expand {
+    background-image: url('../icons/expand_minus.gif');
+}
+
+.ExpandClosed .Expand {
+    background-image: url('../icons/expand_plus.gif');
+}
+
+.ExpandLeaf .Expand {
+    background-image: url('../icons/expand_leaf.gif');
+}
+
+.ExpandOpen .Container {
+    display: block;
+}
+
+.ExpandClosed .Container {
+    display: none;
+}
+
+.ExpandOpen .Expand, .ExpandClosed .Expand {
+    cursor: pointer;
+}
+
+.ExpandLeaf .Expand {
+    cursor: auto;
+}
+
+.context-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.context-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.context-menu ul li {
+    margin-bottom: 0;
+    margin-top: 0;
+    display: block;
+    padding: 2px 20px 2px 10px;
+    background: rgba(211, 211, 211, .9);
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.context-menu ul li:hover {
+    background: #006dd4;
+}
